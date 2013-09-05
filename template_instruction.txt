@@ -1,0 +1,2 @@
+copy template.py to your settings folder
+	- Winpython: <path to distribution>/settings/.spyder2/
