@@ -1,0 +1,63 @@
+%%%%%% TODO
+\newcommand{\todo}[1]
+{
+    \textcolor{red}{
+      \textbf{TODO:}
+      \input{todo/#1}
+    }
+}
+
+%%%%%% item list
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+%%%%%% partial frac
+\newcommand{\pf}[2]
+{
+  \frac{\partial #1}{\partial #2}
+}
+
+%%%%%% eddy viscosity
+\newcommand{\EV}{\mu_\tau}
+
+%%%%% eqref
+%\newcommand{\eqref}[1]
+%{
+%  $\left(\ref{eq:#1}\right)$
+%}
+
+%%%% K-espilon
+
+
+
+\newcommand{\ud}{\,\mathrm{d}}
+\newcommand{\figsize}{0.7\textwidth}
+\newcommand{\figsizet}{0.3\textwidth}
+\newcommand{\Figpage}[1]{Figure~\ref{#1} on Page~\pageref{#1}}
+\newcommand{\fracp}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\fp}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\beq}[1]{\begin{equation}\label{#1}}
+\newcommand{\enq}{\end{equation}}
+%\newcommand{\eqref}[1]{(\ref{#1})}
+\newcommand{\Dx}{\Delta x}
+\newcommand{\Dy}{\Delta y}
+\newcommand{\redt}[1]{\textcolor{red}{#1}}
+\newcommand{\xx}{\boldsymbol{x}}
+\newcommand{\xp}{\boldsymbol{x_p}}
+\newcommand{\ol}{\overline}
+\newcommand{\wt}{\widetilde}
+\newcommand{\wh}{\widehat}
+\newcommand{\bp}[1]{\left< #1 \right>}
+\newcommand{\bbp}[1]{\left\{ #1 \right\}}
+\newcommand{\sect}[1]{Section \S\ref{#1}, p.\pageref{#1}}
+\newcommand{\eqrefApp}[1]{(\ref{#1}, p.\pageref{#1})}
+\newcommand{\refig}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\refigp}[1]{Fig.~\ref{fig:#1}, p.\pageref{fig:#1}}
+\newcommand{\refeq}[1]{Eq.~\eqref{eq:#1}}
+\newcommand{\refeqp}[1]{Eq.~\eqref{eq:#1}, p.\pageref{eq:#1}}
+\newcommand{\Cswz}{C_{\textrm{Swz}}}
+\newcommand{\kepsm}{k\textrm{-}\varepsilon}
+%\newcommand{\keps}{$k$-$\varepsilon$}
+\newcommand{\keps}{$\kepsm$ }
+\newcommand{\rethore}{R\'e{}thor\'e{} }
+\newcommand{\soerensen}{S\o{}rensen }
