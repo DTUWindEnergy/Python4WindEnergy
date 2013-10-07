@@ -6,4 +6,4 @@ This is a repository to gather the teaching material used for the course Python 
 Obtaining writing access
 ------------------------
 
-Write an email to pire@dtu.dk to ask for being added to the contributor list
+Write an email to pire@dtu.dk to ask to be added to the contributor list
