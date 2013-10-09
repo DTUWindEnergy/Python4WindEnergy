@@ -1,0 +1,55 @@
+
+%% Define the two colors of DTU
+\definecolor{Red}{rgb}{0.597,0,0}
+\definecolor{Reddd}{rgb}{0.1,0,0}
+\definecolor{Gray}{rgb}{0.597,0.597,0.597}
+
+%% Add a background picture
+%\setbeamertemplate{background canvas}{\includegraphics[height=\paperheight]{../template/gradient.eps}}
+
+%% Redefined the title size and colors
+\setbeamerfont{title}{size = \Large,series=\bfseries}
+\setbeamercolor{title}{fg=Red}
+
+%% Redefine the Block example style and colors
+\setbeamercolor{block title example}{bg=Red}
+\setbeamerfont{block title example}{series=\bfseries}
+\setbeamercolor{itemize item}{fg=Red}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{button}{bg=Red}
+%\setbeamertemplate{blocks example}[rounded][shadow=true]
+%\setbeamercolor{block body example}{bg=Red}
+
+%% Redefine the author size
+\setbeamerfont{author}{size = \large, series=\bfseries}
+
+%% Redefine the footnotesize
+\setbeamerfont{footnote mark}{size = \tiny}
+\setbeamerfont{footnote}{size = \tiny}
+
+%% Remove the navigation symbols
+\beamertemplatenavigationsymbolsempty
+
+%% Make the colors to be DTU like
+\usecolortheme[named=Red]{structure}
+%\setbeamercolor{block title}{bg=blue,fg=Red}
+\newcommand{\mstyle}[1]{
+	\mathbf{#1}
+}
+\newcommand{\vstyle}[1]{\boldsymbol{#1}}
+%% Change the itemize items to be rotated lozenge
+\setbeamertemplate{itemize items}{\color{Red}{\begin{sideways}$\blacklozenge$\end{sideways}}}
+%% Or 2 rotated lozenges
+%\setbeamertemplate{itemize items}{\color{Red}{\begin{sideways}$\blacklozenge$\end{sideways}\hspace{-0.04cm}\begin{sideways}$\blacklozenge$\end{sideways}}}
+
+
+%% Add some vertical spaces at the headline and footline
+\setbeamertemplate{headline}{\vspace{1.0cm}}
+\setbeamertemplate{footline}{\vspace{1.0cm}}
+
+%% Change the frame title to the DTU color
+\setbeamertemplate{frametitle}{\Large {\bf \color{Red}{\insertframetitle}}}
+
+%% Add a nice gradient in the background
+%\beamertemplateshadingbackground{Gray!10}{white!30}
+

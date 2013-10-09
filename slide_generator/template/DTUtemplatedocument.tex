@@ -1,0 +1,68 @@
+
+\setbeamertemplate{headline}[default]
+%\setbeamertemplate{footline}[default]
+% \setbeamertemplate{footline}[text line]{ 
+% 	\begin{columns}
+% 		\column{0.075\textwidth}
+% 			\begin{flushright}
+% 				\gray \insertframenumber \ of \inserttotalframenumber
+% 			\end{flushright}
+% 			\vspace{.01\textheight}		
+% 		\column{0.4\textwidth}
+% 			\begin{flushleft}
+% 				\black \insertshortauthor {} \insertshortinstitute
+% 			\end{flushleft}
+% 			\vspace{.01\textheight}
+% 		\column{0.525\textwidth}
+% 			\begin{flushright}
+% 				\mdseries \color{Gray}{ {\bf\insertshorttitle {} \insertshortdate} }
+% 			\end{flushright}
+% 			\vspace{.01\textheight}
+% 	\end{columns}
+% } 
+
+%\setbeamertemplate{footline}[default]
+\setbeamertemplate{footline}[text line]{ 
+	\begin{columns}
+		\column{0.075\textwidth}
+			\begin{flushright}
+				\gray \insertframenumber \ of \inserttotalframenumber
+			\end{flushright}
+			\vspace{.01\textheight}		
+		\column{0.4\textwidth}
+			\begin{flushleft}
+				\black \insertshortauthor {} \insertshortinstitute
+			\end{flushleft}
+			\vspace{.01\textheight}
+		\column{0.525\textwidth}
+			\begin{flushright}
+				\mdseries \color{Gray}{ {\bf\insertshorttitle {} }}%\insertshortdate} }
+			\end{flushright}
+			\vspace{.01\textheight}
+	\end{columns}
+	
+} 
+\addtobeamertemplate{headline}{}
+{ 
+	\begin{columns}
+		\column{0.7\textwidth}
+%			\hspace{0.5\textwidth}
+      \begin{flushleft}
+       \Large \gray \insertsubsection %$\quad$ {\it \insertsubsection}
+      \end{flushleft}
+		\column{0.05\textwidth}
+			\hspace{0.8\textwidth}
+			\includegraphics[height=0.75cm]{template/dtulogocmyk-eps-converted-to.pdf}
+			%\hspace{0.08cm}
+			%\includegraphics[height=0.75cm]{template/AAUlogo.eps}
+	\end{columns}
+}
+{
+\setbeamertemplate{footline}[text line]{}
+\begin{frame}
+	\vspace{6cm} 	
+		\includegraphics[width=0.3\textwidth]{template/DTUWindAUKRGB.pdf}
+  \vspace{-8.5cm} 
+  \titlepage
+\end{frame}
+}

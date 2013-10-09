@@ -1,0 +1,317 @@
+% wedoc.tex V1.0, 17 June 2010
+
+\documentclass[times]{weauth}
+
+\usepackage{moreverb}
+
+\usepackage[dvips,colorlinks,bookmarksopen,bookmarksnumbered,citecolor=red,urlcolor=red]{hyperref}
+
+\newcommand\BibTeX{{\rmfamily B\kern-.05em \textsc{i\kern-.025em b}\kern-.08em
+T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\def\volumeyear{2010}
+
+\begin{document}
+
+\runningheads{A.~N.~Other}{A demonstration of the \journalabb\
+class file}
+
+\articletype{RESEARCH ARTICLE}
+
+\title{A demonstration of the \LaTeXe\ class file for
+\itshape{\journalnamelc}\footnotemark[2]}
+
+\author{A.~N.~Other}
+
+\address{John Wiley \& Sons, Ltd, The Atrium, Southern Gate, Chichester,
+West Sussex, PO19~8SQ, UK}
+
+\corraddr{Journals Production Department, John Wiley \& Sons, Ltd,
+The Atrium, Southern Gate, Chichester, West Sussex, PO19~8SQ, UK.}
+
+\begin{abstract}
+This paper describes the use of the \LaTeXe\
+\textsf{\journalclass} class file for setting papers for
+\emph{\journalnamelc}.
+\end{abstract}
+
+\keywords{class file; \LaTeXe; \emph{\journalabb}}
+
+\maketitle
+
+\footnotetext[2]{Please ensure that you use the most up to date
+class file,
+available from the WE Home Page at\\
+\href{http://www3.interscience.wiley.com/journal/6276/home}{\texttt{http://www3.interscience.wiley.com/journal/6276/home}}}
+
+\section{Introduction}
+Many authors submitting to research journals use \LaTeXe\ to
+prepare their papers. This paper describes the
+\textsf{\journalclass} class file which can be used to convert
+articles produced with other \LaTeXe\ class files into the correct
+form for publication in \emph{\journalnamelc}.
+
+The \textsf{\journalclass} class file preserves much of the
+standard \LaTeXe\ interface so that any document which was
+produced using the standard \LaTeXe\ \textsf{article} style can
+easily be converted to work with the \textsf{\journalclassshort}
+style. However, the width of text and typesize will vary from that
+of \textsf{article.cls}; therefore, \emph{line breaks will change}
+and it is likely that displayed mathematics and tabular material
+will need re-setting.
+
+In the following sections we describe how to lay out your code to
+use \textsf{\journalclass} to reproduce the typographical look of
+\emph{\journalnamelc}. However, this paper is not a guide to
+using \LaTeXe\ and we would refer you to any of the many books
+available (see, for example, \cite{R1,R2,R3}).
+
+\section{The Three Golden Rules}
+
+Before we proceed, we would like to stress \emph{three golden
+rules} that need to be followed to enable the most efficient use
+of your code at the typesetting stage:
+\begin{enumerate}
+\item[(i)] keep your own macros to an absolute minimum;
+
+\item[(ii)] as \TeX\ is designed to make sensible spacing
+decisions by itself, do \emph{not} use explicit horizontal or
+vertical spacing commands, except in a few accepted (mostly
+mathematical) situations, such as \verb"\," before a
+differential~d, or \verb"\quad" to separate an equation from its
+qualifier;
+
+\item[(iii)] follow the \emph{\journalnamelc} reference style.
+\end{enumerate}
+
+\section{Getting Started} The \textsf{\journalclassshort} class file should run
+on any standard \LaTeXe\ installation. If any of the fonts, style
+files or packages it requires are missing from your installation,
+they can be found on the \emph{\TeX\ Collection} DVDs or from
+CTAN.
+
+\emph{\journalnamelc} is published using Times fonts and this is
+achieved by using the \verb"times"
+option as\\
+\verb"\documentclass[times]{weauth}".
+
+\noindent If for any reason you have a problem using Times you can
+easily resort to Computer Modern fonts by removing the
+\verb"times" option.
+
+\begin{figure}
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{0pt}%
+\begin{center}
+\begin{boxedverbatim}
+\documentclass[times]{weauth}
+%\documentclass[times,doublespace]{weauth}%For paper submission
+
+\begin{document}
+
+\runningheads{<Initials and Surnames>}{<Short title>}
+
+\articletype{<Article type>}
+
+\title{<Initial cap, lower case>}
+
+\author{<An Author\affil{1},
+Someone Else\affil{2}\ and Perhaps Another\affil{1}>}
+
+\address{<\affilnum{1}First author's address
+(in this example it is the same as the third author)
+\affilnum{2}Second author's address>}
+
+\corraddr{<Corresponding author's address>.
+E-mail: <corresponding author's email address>}
+
+%\cgs{<Contract/grant sponsor name (no number)>}
+%\cgsn{<Contract/grant sponsor name>}{<number>}
+
+\begin{abstract}
+<Text>
+\end{abstract}
+
+\keywords{<List keywords>}
+
+\maketitle
+
+\section{Introduction}
+.
+.
+.
+\end{boxedverbatim}
+\end{center}
+\caption{Example header text.\label{F1}}
+\end{figure}
+
+
+\section{The Article Header Information}
+The heading for any file using \textsf{\journalclass} is shown in
+Figure~\ref{F1}.
+
+\subsection{Remarks}
+\begin{enumerate}
+\item[(i)] In \verb"\runningheads" use `\emph{et~al.}' if there
+are three or more authors.
+
+\item[(ii)] Note the use of \verb"\affil" and \verb"\affilnum" to
+link names and addresses. The details for the corresponding
+author should be included in the \verb"\corraddr" command.
+
+\item[(iii)] For submitting a double-spaced manuscript, add
+\verb"doublespace" as an option to the documentclass line.
+
+\item[(iv)] Use \verb"\cgs" for giving details of financial
+sponsors; alternatively use \verb"\cgsn" if the grant number is
+also to be included.
+%These details will be printed as a footnote,
+%with `Contract/grant sponsor:' and `contract/grant number:'
+%inserted in the appropriate places.
+
+\item[(v)] The abstract should be capable of standing by itself,
+in the absence of the body of the article and of the bibliography.
+Therefore, it must not contain any reference citations.
+
+\item[(vi)] Keywords are separated by semicolons.
+\end{enumerate}
+
+\begin{figure}
+\setlength{\fboxsep}{0pt}%
+\setlength{\fboxrule}{0pt}%
+\begin{center}
+\begin{boxedverbatim}
+\begin{table}
+\caption{<Table caption>}
+\centering
+\small
+\begin{tabular}{<table alignment>}
+\toprule
+<column headings>\\
+\midrule
+<table entries
+(separated by & as usual)>\\
+<table entries>\\
+.
+.
+.\\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{boxedverbatim}
+\end{center}
+\caption{Example table layout.\label{F2}}
+\end{figure}
+
+\section{The Body of the Article}
+
+\subsection{Mathematics} \textsf{\journalclass} makes the full
+functionality of \AmS\/\TeX\ available. We encourage the use of
+the \verb"align", \verb"gather" and \verb"multline" environments
+for displayed mathematics. \textsf{amsthm} is used for setting
+theorem-like and proof environments. The usual \verb"\newtheorem"
+command needs to be used to set up the environments for your
+particular document.
+
+\subsection{Figures and Tables} \textsf{\journalclass} includes the
+\textsf{graphicx} package for handling figures.
+
+Figures are called in as follows:
+\begin{verbatim}
+\begin{figure}
+\centering
+\includegraphics{<figure name>}
+\caption{<Figure caption>}
+\end{figure}
+\end{verbatim}
+
+For further details on how to size figures, etc., with the
+\textsf{graphicx} package see, for example, \cite{R1}
+or \cite{R3}. If figures are available in an
+acceptable format (for example, .eps, .ps) they will be used but a
+printed version should always be provided. \medbreak
+
+The standard coding for a table is shown in Figure~\ref{F2}.
+
+\subsection{Cross-referencing}
+The use of the \LaTeX\ cross-reference system
+for figures, tables, equations, etc., is encouraged
+(using \verb"\ref{<name>}" and \verb"\label{<name>}").
+
+\subsection{Acknowledgements} An Acknowledgements section is started with \verb"\ack" or
+\verb"\acks" for \textbf{ACKNOWLEDGEMENT} or
+\textbf{ACKNOWLEDGEMENTS}, respectively. It must be placed just
+before the References.
+
+\subsection{Bibliography}
+The normal commands for producing the reference list are:
+\begin{verbatim}
+\begin{thebibliography}{99}
+\bibitem{<x-ref label>}
+         <Reference details>
+.
+.
+.
+\end{thebibliography}
+\end{verbatim}
+where \verb"\bibitem{x-ref label}"
+corresponds to \verb"\cite{x-ref label}" in the body of the article
+and \verb"{99}" is the widest such number expected and determines
+the width of the number column in the reference list.
+
+Please note that the file \textsf{wileyj.bst} is available from
+the same download page for those authors using \BibTeX.
+
+\subsection{Double Spacing}
+If you need to double space your document for submission please
+use the \verb+doublespace+ option as shown in the sample layout in
+Figure~\ref{F1}.
+
+\section{Support for \textsf{\journalclass}}
+We offer on-line support to participating authors. Please contact
+us via e-mail at\\
+\href{mailto:weauth-cls@wiley.co.uk}{\texttt{weauth-cls@wiley.co.uk}}.
+
+We would welcome any feedback, positive or otherwise, on your
+experiences of using \textsf{\journalclass}.
+
+\section{Copyright Statement}
+Please  be  aware that the use of  this \LaTeXe\ class file is
+governed by the following conditions.
+
+\subsection{Copyright}
+Copyright \copyright\ \volumeyear\ John Wiley \& Sons, Ltd, The
+Atrium, Southern Gate, Chichester, West Sussex, PO19~8SQ, UK. All
+rights reserved.
+
+\subsection{Rules of Use}
+This class file is made available for use by authors who wish to
+prepare an article for publication in \emph{\journalnamelc}
+published by John Wiley \& Sons, Ltd. The user may not exploit any
+part of the class file commercially.
+
+This class file is provided on an \emph{as is}  basis, without
+warranties of any kind, either express or implied, including but
+not limited to warranties of title, or implied  warranties of
+merchantablility or fitness for a particular purpose. There will
+be no duty on the author[s] of the software or  John Wiley \&
+Sons, Ltd to correct any errors or defects in the software. Any
+statutory  rights you may have remain unaffected by your
+acceptance of these rules of use.
+
+\ack This class file was developed by Sunrise Setting Ltd,
+Torquay, Devon, UK. Website:\\
+\href{http://www.sunrise-setting.co.uk}{\texttt{www.sunrise-setting.co.uk}}
+
+\begin{thebibliography}{9}
+
+\bibitem{R1} Kopka~H, Daly~PW. 2003. \emph{A Guide to \LaTeX} (4th~edn).
+Addison-Wesley.
+
+\bibitem{R2} Lamport~L. 1994. \emph{\LaTeX: a Document Preparation System} (2nd~edn).
+Addison-Wesley.
+
+\bibitem{R3} Mittelbach~F, Goossens~M. 2004. \emph{The \LaTeX\ Companion}
+(2nd~edn). Addison-Wesley.
+\end{thebibliography}
+\end{document}
