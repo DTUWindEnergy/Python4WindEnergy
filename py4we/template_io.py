@@ -1,36 +1,42 @@
-""" IO classes for YOUR_FILE_TYPE_NAME file types
+""" IO classes for the DTU FileType class
 
 Copyright (C) 2013 DTU Wind Energy
 
-Author: YOUR_NAME
-Email: YOUR_EMAIL
-Last revision: DATE
+Author: Pierre-Elouan Rethore
+Email: pire@dtu.dk
+Last revision: 9/10/2013
 
 License: Apache v2.0, http://www.apache.org/licenses/LICENSE-2.0
 """
 
-
 class FileType(object):
-    """ general IO classe for YOUR_FILE_TYPE_NAME file types """
+    """Generic IO classe for file types classes."""
 
     def __init__(self, filename=None):
         """ Initialized the classe using the filename
 
         Parameters:
         ----------
-        filename : string
+        filename : string (optional)
                    The file name to read and write
         """
         if filename:
             ### If there is a new filename, replace the object variable
             self.filename = filename
+            ### If the filename is provided, read the file 
+            self.read()
 
-    def read(self, filename=None):
+    def _read(self, filename=None):
         """ Read the file 
         Parameters:
         ----------
-        filename : string
+        filename : string (optional)
                    The file name to read
+
+        Returns:
+        --------
+        data : string
+        	   the data read
         """
         if filename:
             ### If there is a new filename, replace the object variable
@@ -39,19 +45,18 @@ class FileType(object):
         if self.filename:
             with open(self.filename, 'r') as f:
                 data = f.read()
+                return data
         else:  # If self.filename == None, raise an exception
             raise Exception('No filename has been provided')
 
-        # HERE DO SOMETHING TO PREPARE THE DATA ##########################
-        # Try to put the data into something called self.data ############
-        self.data = data  # <- Replace this ##############################
-
-    def write(self, filename=None):
+    def _write(self, data, filename=None):
         """ Write a file
 
         Parameters:
         ----------
-        filename : string
+        data : string
+                   The data to be written
+        filename : string (optional)
                    The file name to write
         """
         if filename:
@@ -60,11 +65,32 @@ class FileType(object):
 
         if self.filename:
             with open(self.filename, 'w') as f:
-                # HERE DO SOMETHING TO PREPARE THE DATA TO BE WRITTEN ####
-                f.write(self.data)  # <- Replace this ####################
+                f.write(data) 
         else:
             # If self.filename == None, raise an exception
             raise Exception('No filename has been provided')
+
+    ### Public methods to be implemented in the subclasses --------------------
+    def read(self, filename=None):
+        """ Read the file 
+        Parameters:
+        ----------
+        filename : string (optional)
+                   The file name to read
+        """
+        ### You are going to replace this code when you inherit from this class
+        raise NotImplementedError("This method must be implemented in subclass")
+
+    def write(self, filename=None):
+        """ Write a file
+
+        Parameters:
+        ----------
+        filename : string (optional)
+                   The file name to write
+        """
+        ### You are going to replace this code when you inherit from this class
+        raise NotImplementedError("This method must be implemented in subclass")
 
 
 
@@ -74,37 +100,20 @@ import unittest
 class TestFileType(unittest.TestCase):
     """ Test class for FileType class """
 
-    def test_duplication(self):
+    def _test_duplication(self, klass, filename):
         """ Test if a file is written correctly by comparing with the data 
         of the original file
         """
+        original_filename = filename
+        new_filename = 'new_' + original_filename
 
-        original_file = FileType('test_file.dat')
-        original_file.read()
-        original_file.write('new_file.dat')
+        ### Open a new file
+        original_file = klass(original_filename)
+        ### write the file to a new filename
+        original_file.write(new_filename)
 
-        new_file = FileType('new_file.dat')
-        new_file.read()
+        new_file = klass(new_filename)
 
         ### Unit test function to check if two things are equal
-        ##### MODIFY THIS IF NOT APPROPRIATE #############################
         self.assertEqual(original_file.data, new_file.data)
-
-        ### ADD ADDITIONAL TEST TO SEE IF THE FILE HAS BEEN WRITTEN ######
-        ### CORRECTLY ####################################################
-
-
-if __name__ == '__main__':
-    """ This is the main fuction that will run the tests automatically
-
-    $> python template_io.py
-
-    .
-    ----------------------------------------------------------------------
-    Ran X test in XXXs
-
-    OK
-    """
-    unittest.main()
-
 
