@@ -2,7 +2,7 @@
 
 Copyright (C) 2013 DTU Wind Energy
 
-Authors: Pierre-Elouan Rethore, Mads Mølgaard Pedersen
+Authors: Pierre-Elouan Rethore, Mads Moelgaard Pedersen
 Email: pire@dtu.dk, mmpe@dtu.dk
 Last revision: 9/10/2013
 
@@ -44,7 +44,7 @@ class WEFileIO(object):
 
         if self.filename:
             self._read()
-            return self.data
+            #return self.data
         else:  # If self.filename == None, raise an exception
             raise Exception('No filename has been provided')
 
@@ -91,7 +91,7 @@ class TestWEFileIO(unittest.TestCase):
         of the original file
         """
         original_filename = filename
-        new_filename = 'new_' + original_filename
+        new_filename =  original_filename + '_new'
 
         ### Open a new file
         original_file = class_(original_filename)

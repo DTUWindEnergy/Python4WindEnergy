@@ -52,7 +52,7 @@ class TestMyDatFileIO(TestWEFileIO):
     """ Test class for MyFileType class """
 
     def test_duplication(self):
-        self._test_duplication(MyDatFileIO, 'test_file.dat')
+        self._test_duplication(MyDatFileIO, './test/dat/test_file.dat')
 
 
 ## Main function ---------------------------------------------------------
