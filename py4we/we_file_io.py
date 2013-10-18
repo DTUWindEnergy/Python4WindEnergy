@@ -9,6 +9,8 @@ Last revision: 9/10/2013
 License: Apache v2.0, http://www.apache.org/licenses/LICENSE-2.0
 """
 
+import numpy as np
+
 class WEFileIO(object):
     """Generic IO classe for file types classes."""
 
@@ -103,3 +105,20 @@ class TestWEFileIO(unittest.TestCase):
         ### Unit test function to check if two things are equal
         self.assertEqual(original_file.data, new_file.data)
 
+
+    def _test_duplication_array(self, class_, filename):
+        """ Test if a file is written correctly by comparing with the data
+        of the original file
+        """
+        original_filename = filename
+        new_filename =  original_filename + '_new'
+
+        ### Open a new file
+        original_file = class_(original_filename)
+        ### write the file to a new filename
+        original_file.write(new_filename)
+
+        new_file = class_(new_filename)
+
+        ### Unit test function to check if two things are equal
+        self.assertTrue(np.linalg.norm(original_file.data-new_file.data)<1.0E-8)
