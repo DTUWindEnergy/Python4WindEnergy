@@ -88,10 +88,7 @@ import unittest
 class TestWEFileIO(unittest.TestCase):
     """ Test class for FileType class """
 
-    def _test_duplication(self, class_, filename):
-        """ Test if a file is written correctly by comparing with the data
-        of the original file
-        """
+    def _duplicate(self, class_, filename):
         original_filename = filename
         new_filename =  original_filename + '_new'
 
@@ -102,6 +99,14 @@ class TestWEFileIO(unittest.TestCase):
 
         new_file = class_(new_filename)
 
+        return original_file, new_file
+
+
+    def _test_duplication(self, class_, filename):
+        """ Test if a file is written correctly by comparing with the data
+        of the original file
+        """
+        original_file, new_file = self._duplicate(class_, filename)
         ### Unit test function to check if two things are equal
         self.assertEqual(original_file.data, new_file.data)
 
@@ -110,15 +115,7 @@ class TestWEFileIO(unittest.TestCase):
         """ Test if a file is written correctly by comparing with the data
         of the original file
         """
-        original_filename = filename
-        new_filename =  original_filename + '_new'
-
-        ### Open a new file
-        original_file = class_(original_filename)
-        ### write the file to a new filename
-        original_file.write(new_filename)
-
-        new_file = class_(new_filename)
+        original_file, new_file = self._duplicate(class_, filename)
 
         ### Unit test function to check if two things are equal
         self.assertTrue(np.linalg.norm(original_file.data-new_file.data)<1.0E-8)
