@@ -84,6 +84,7 @@ class WEFileIO(object):
 
 ## Do Some testing -------------------------------------------------------
 import unittest
+import os
 
 class TestWEFileIO(unittest.TestCase):
     """ Test class for FileType class """
@@ -109,6 +110,7 @@ class TestWEFileIO(unittest.TestCase):
         original_file, new_file = self._duplicate(class_, filename)
         ### Unit test function to check if two things are equal
         self.assertEqual(original_file.data, new_file.data)
+        os.remove(new_file.filename)
 
 
     def _test_duplication_array(self, class_, filename):
@@ -119,3 +121,4 @@ class TestWEFileIO(unittest.TestCase):
 
         ### Unit test function to check if two things are equal
         self.assertTrue(np.linalg.norm(original_file.data-new_file.data)<1.0E-8)
+        os.remove(new_file.filename)

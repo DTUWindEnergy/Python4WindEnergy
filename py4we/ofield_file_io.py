@@ -212,10 +212,12 @@ class TestOmnivorField(TestWEFileIO):
 #     InputFile.write(test_file+'_new')
 # 
     def test_duplication(self):
+        import os
         original_file, new_file = self._duplicate(OmnivorFieldFile, self.test_file)
 #         self.assertEqual(original_file.data[], new_file.data)
         np.array_equal(original_file.data['CPs'], new_file.data['CPs'])
         np.array_equal(original_file.data['Utot'], new_file.data['Utot'])
+        os.remove(new_file.filename)
 
 
 ## Main function ---------------------------------------------------------
