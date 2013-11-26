@@ -4,7 +4,7 @@ Copyright (C) 2013 DTU Wind Energy
 
 Author: Emmanuel Branlard
 Email: ebra@dtu.dk
-Last revision: 25/11/2013
+Last revision: ask git
 
 License: None
 """
@@ -18,7 +18,7 @@ import numpy as np
 import os.path as path
 
 # To read fortran namelist
-from fortran_namelist_io  import FortranNamelistIO , TestFortranNamelist
+from fortran_namelist_io  import FortranNamelistIO 
 import tempfile
 import os
 import sys
@@ -84,8 +84,7 @@ class TestOmnivorInput(TestWEFileIO):
     test_file = './test/omnivor/freewake_nm80.oin'
     #InputFile=OmnivorInputFile(test_file)
     #print(InputFile['Wind'])
-    
-    InputFile.export_lib_command('./test/omnivor/freewake_nm80.m')
+    #InputFile.export_lib_command('./test/omnivor/freewake_nm80.m')
 
     def test_output_identical(self):
         InputFile=OmnivorInputFile(self.test_file)
@@ -110,15 +109,6 @@ class TestOmnivorInput(TestWEFileIO):
 ## Main function ---------------------------------------------------------
 if __name__ == '__main__':
     """ This is the main fuction that will run the tests automatically
-
-    $> python my_file_type.py
-
-    ----- SOME_PRINT_STATEMENTS -----
-    .
-    ----------------------------------------------------------------------
-    Ran X test in XXXs
-
-    OK
     """
     unittest.main()
 
