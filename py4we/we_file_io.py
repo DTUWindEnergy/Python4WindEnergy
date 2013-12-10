@@ -10,7 +10,7 @@ License: Apache v2.0, http://www.apache.org/licenses/LICENSE-2.0
 """
 
 import numpy as np
-
+import matplotlib.pyplot as plt
 class WEFileIO(object):
     """Generic IO classe for file types classes."""
 
@@ -69,6 +69,12 @@ class WEFileIO(object):
             # If self.filename == None, raise an exception
             raise Exception('No filename has been provided')
 
+    def plot(self):
+        fig = plt.figure()
+        self._plot(fig)
+        plt.show()
+
+
     ### Private methods to be implemented in the subclasses --------------------
     def _read(self):
         """ Read the file."""
@@ -91,7 +97,7 @@ class TestWEFileIO(unittest.TestCase):
 
     def _duplicate(self, class_, filename):
         original_filename = filename
-        new_filename =  original_filename + '_new'
+        new_filename = original_filename + '_new'
 
         ### Open a new file
         original_file = class_(original_filename)
@@ -120,5 +126,5 @@ class TestWEFileIO(unittest.TestCase):
         original_file, new_file = self._duplicate(class_, filename)
 
         ### Unit test function to check if two things are equal
-        self.assertTrue(np.linalg.norm(original_file.data-new_file.data)<1.0E-8)
+        self.assertTrue(np.linalg.norm(original_file.data - new_file.data) < 1.0E-8)
         os.remove(new_file.filename)

@@ -45,6 +45,10 @@ class MyDatFileIO(WEFileIO):
         # HERE DO SOMETHING TO PREPARE THE DATA TO BE READ ############
 
 
+    def _plot(self, fig):
+        ax = fig.add_subplot(1, 1, 1)
+        ax.plot([ord(s) for s in self.data])
+        ax.set_title(self.data)
 
 
 ## Do Some testing -------------------------------------------------------
@@ -66,5 +70,6 @@ if __name__ == '__main__':
 
     OK
     """
-    unittest.main()
+    #unittest.main()
+    MyDatFileIO("test_file.dat").plot()
 
