@@ -71,5 +71,5 @@ if __name__ == '__main__':
     OK
     """
     #unittest.main()
-    MyDatFileIO("test_file.dat").plot()
+    MyDatFileIO("test/dat/test_file.dat").plot()
 
