@@ -1,0 +1,59 @@
+STRING fem_create_nodes__nodes_created[VIRTUAL]
+        STRING uil_list_create_current_list[VIRTUAL]
+
+        fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000001", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 2011.2 2012.2 2013.2 2014.2 2015.2 2016.2 2017.2 2032.2 2033.2 2034.2 2035.2 2036.2 2037.2 2038.2 @
+2050.2 2051.2 2052.2 2053.2 2054.2 2055.2 2056.2 2057.2 2058.2 2059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 1, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000001", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000002", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 3011.2 3012.2 3013.2 3014.2 3015.2 3016.2 3017.2 3032.2 3033.2 3034.2 3035.2 3036.2 3037.2 3038.2 @
+3050.2 3051.2 3052.2 3053.2 3054.2 3055.2 3056.2 3057.2 3058.2 3059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 2, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000002", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000003", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 4011.2 4012.2 4013.2 4014.2 4015.2 4016.2 4017.2 4032.2 4033.2 4034.2 4035.2 4036.2 4037.2 4038.2 @
+4050.2 4051.2 4052.2 4053.2 4054.2 4055.2 4056.2 4057.2 4058.2 4059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 3, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000003", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000004", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 5011.2 5012.2 5013.2 5014.2 5015.2 5016.2 5017.2 5032.2 5033.2 5034.2 5035.2 5036.2 5037.2 5038.2 @
+5050.2 5051.2 5052.2 5053.2 5054.2 5055.2 5056.2 5057.2 5058.2 5059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 4, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000004", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000005", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 6011.2 6012.2 6013.2 6014.2 6015.2 6016.2 6017.2 6032.2 6033.2 6034.2 6035.2 6036.2 6037.2 6038.2 @
+6050.2 6051.2 6052.2 6053.2 6054.2 6055.2 6056.2 6057.2 6058.2 6059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 5, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000005", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000006", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 7011.2 7012.2 7013.2 7014.2 7015.2 7016.2 7017.2 7032.2 7033.2 7034.2 7035.2 7036.2 7037.2 7038.2 @
+7050.2 7051.2 7052.2 7053.2 7054.2 7055.2 7056.2 7057.2 7058.2 7059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 6, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000006", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
+fem_create_nodes_1( "Coord 0", "Coord 0", 3, "2000007", " @
+[  0.0000,   0.0000,   0.0000] @
+", fem_create_nodes__nodes_created )
+list_create_node_ass_geo( "Solid 8011.2 8012.2 8013.2 8014.2 8015.2 8016.2 8017.2 8032.2 8033.2 8034.2 8035.2 8036.2 8037.2 8038.2 @
+8050.2 8051.2 8052.2 8053.2 8054.2 8055.2 8056.2 8057.2 8058.2 8059.2", "lista", uil_list_create_current_list )
+fem_create_mpc_nodal2( 7, "RBE3", 0., 2, [TRUE, FALSE],["0.", "1.0"], ["Node 2000007", "`lista`"], ["UX,UY,UZ,RX,RY,RZ", "UX,UY,UZ"] )
+uil_list_a.clear(  )
+ 
