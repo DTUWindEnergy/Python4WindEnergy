@@ -72,6 +72,7 @@ class WEFileIO(object):
     def plot(self):
         fig = plt.figure()
         self._plot(fig)
+        fig.save
         plt.show()
 
 
@@ -83,6 +84,14 @@ class WEFileIO(object):
 
     def _write(self):
         """ Write a file"""
+        ### You are going to replace this code when you inherit from this class
+        raise NotImplementedError("This method must be implemented in subclass")
+
+    def _plot(self, fig):
+        """
+        Plot your data
+        :param matplotlib.figure: figure to plot on
+        """
         ### You are going to replace this code when you inherit from this class
         raise NotImplementedError("This method must be implemented in subclass")
 
