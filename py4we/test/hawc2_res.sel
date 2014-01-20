@@ -1,0 +1,700 @@
+________________________________________________________________________________________________________________________
+  Version ID : HAWC2MB 11.4
+                                                            Time : 16:35:15
+                                                            Date : 22:07.2013
+________________________________________________________________________________________________________________________
+  Result file : ./res/noshdlc11_ntm_11_wd00_s1.dat
+________________________________________________________________________________________________________________________
+   Scans    Channels    Time [sec]      Format
+      30000    343        600.000       BINARY
+
+  Channel   Variable Description               
+
+     1      Time                           s          Time
+     2      bea1 angle                     deg        shaft_rot angle
+     3      bea1 angle_speed               rpm        shaft_rot angle speed
+     4      bea1 angle                     deg        pitch1 angle
+     5      bea1 angle_speed               deg/s      pitch1 angle speed
+     6      bea1 angle                     deg        pitch2 angle
+     7      bea1 angle_speed               deg/s      pitch2 angle speed
+     8      bea1 angle                     deg        pitch3 angle
+     9      bea1 angle_speed               deg/s      pitch3 angle speed
+    10       Omega                         rad/s       Rotor speed
+    11      Ae rot. torque                 kNm        Aero rotor torque
+    12      Ae rot. power                  kW         Aero rotor power
+    13      Ae rot. thrust                 kN         Aero rotor thrust
+    14      WSP gl. coo.,Vx                m/s        Free wind speed Vx, gl. coo, of gl. pos    0.00,   0.00,-119.00
+    15      WSP gl. coo.,Vy                m/s        Free wind speed Vy, gl. coo, of gl. pos    0.00,   0.00,-119.00
+    16      WSP gl. coo.,Vz                m/s        Free wind speed Vz, gl. coo, of gl. pos    0.00,   0.00,-119.00
+    17      Mx coo: tower                  kNm        MomentMx Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    18      My coo: tower                  kNm        MomentMy Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    19      Mz coo: tower                  kNm        MomentMz Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    20      Fx coo: tower                  kN         Force  Fx Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    21      Fy coo: tower                  kN         Force  Fy Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    22      Fz coo: tower                  kN         Force  Fz Mbdy:towertop nodenr:   1 coo: tower  tower top -1: below top mass
+    23      Mx coo: tower                  kNm        MomentMx Mbdy:tower nodenr:   1 coo: tower  tower base
+    24      My coo: tower                  kNm        MomentMy Mbdy:tower nodenr:   1 coo: tower  tower base
+    25      Mz coo: tower                  kNm        MomentMz Mbdy:tower nodenr:   1 coo: tower  tower base
+    26      Fx coo: tower                  kN         Force  Fx Mbdy:tower nodenr:   1 coo: tower  tower base
+    27      Fy coo: tower                  kN         Force  Fy Mbdy:tower nodenr:   1 coo: tower  tower base
+    28      Fz coo: tower                  kN         Force  Fz Mbdy:tower nodenr:   1 coo: tower  tower base
+    29      Mx coo: towertop               kNm        MomentMx Mbdy:towertop nodenr:   1 coo: towertop  yaw bearing
+    30      My coo: towertop               kNm        MomentMy Mbdy:towertop nodenr:   1 coo: towertop  yaw bearing
+    31      Mz coo: towertop               kNm        MomentMz Mbdy:towertop nodenr:   1 coo: towertop  yaw bearing
+    32      Fx coo: towertop               kN         Force  Fx Mbdy:towertop nodenr:   1 coo: towertop  yaw bering
+    33      Fy coo: towertop               kN         Force  Fy Mbdy:towertop nodenr:   1 coo: towertop  yaw bering
+    34      Fz coo: towertop               kN         Force  Fz Mbdy:towertop nodenr:   1 coo: towertop  yaw bering
+    35      Mx coo: shaft                  kNm        MomentMx Mbdy:shaft nodenr:   4 coo: shaft  main bearing
+    36      My coo: shaft                  kNm        MomentMy Mbdy:shaft nodenr:   4 coo: shaft  main bearing
+    37      Mz coo: shaft                  kNm        MomentMz Mbdy:shaft nodenr:   4 coo: shaft  main bearing
+    38      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 root
+    39      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 root
+    40      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 root
+    41      Mx coo: local                  kNm        MomentMx Mbdy:blade1 nodenr:  13 coo: local  blade 1 50% local e coo
+    42      My coo: local                  kNm        MomentMy Mbdy:blade1 nodenr:  13 coo: local  blade 1 50% local e coo
+    43      Mz coo: local                  kNm        MomentMz Mbdy:blade1 nodenr:  13 coo: local  blade 1 50% local e coo
+    44      Mx coo: hub1                   kNm        MomentMx Mbdy:hub1 nodenr:   2 coo: hub1  blade 1 root
+    45      My coo: hub1                   kNm        MomentMy Mbdy:hub1 nodenr:   2 coo: hub1  blade 1 root
+    46      Mz coo: hub1                   kNm        MomentMz Mbdy:hub1 nodenr:   2 coo: hub1  blade 1 root
+    47      Mx coo: hub2                   kNm        MomentMx Mbdy:hub2 nodenr:   2 coo: hub2  blade 2 root
+    48      My coo: hub2                   kNm        MomentMy Mbdy:hub2 nodenr:   2 coo: hub2  blade 2 root
+    49      Mz coo: hub2                   kNm        MomentMz Mbdy:hub2 nodenr:   2 coo: hub2  blade 2 root
+    50      Mx coo: hub3                   kNm        MomentMx Mbdy:hub3 nodenr:   2 coo: hub3  blade 3 root
+    51      My coo: hub3                   kNm        MomentMy Mbdy:hub3 nodenr:   2 coo: hub3  blade 3 root
+    52      Mz coo: hub3                   kNm        MomentMz Mbdy:hub3 nodenr:   2 coo: hub3  blade 3 root
+    53      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+    54      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+    55      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+    56      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+    57      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+    58      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+    59      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+    60      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+    61      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+    62      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+    63      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+    64      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+    65      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+    66      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+    67      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+    68      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+    69      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+    70      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+    71      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+    72      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+    73      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+    74      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+    75      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+    76      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+    77      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+    78      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+    79      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+    80      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+    81      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+    82      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+    83      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+    84      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+    85      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+    86      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+    87      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+    88      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+    89      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+    90      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+    91      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+    92      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+    93      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+    94      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+    95      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+    96      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+    97      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+    98      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+    99      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+   100      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+   101      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   102      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   103      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   104      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   105      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   106      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   107      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   108      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   109      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   110      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   111      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   112      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   113      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   114      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   115      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   116      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   117      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   118      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   119      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   120      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   121      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   122      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   123      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   124      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   125      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   126      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   127      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   128      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   129      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   130      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   131      Fx coo: blade1                 kN         Force  Fx Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   132      Fy coo: blade1                 kN         Force  Fy Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   133      Fz coo: blade1                 kN         Force  Fz Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   134      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+   135      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+   136      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   1 coo: blade1  blade 1 node 1
+   137      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+   138      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+   139      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   2 coo: blade1  blade 1 node 2
+   140      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+   141      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+   142      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   3 coo: blade1  blade 1 node 3
+   143      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+   144      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+   145      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   4 coo: blade1  blade 1 node 4
+   146      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+   147      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+   148      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   5 coo: blade1  blade 1 node 5
+   149      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+   150      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+   151      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   6 coo: blade1  blade 1 node 6
+   152      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+   153      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+   154      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   7 coo: blade1  blade 1 node 7
+   155      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+   156      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+   157      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   8 coo: blade1  blade 1 node 8
+   158      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+   159      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+   160      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:   9 coo: blade1  blade 1 node 9
+   161      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+   162      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+   163      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  10 coo: blade1  blade 1 node 10
+   164      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+   165      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+   166      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  11 coo: blade1  blade 1 node 11
+   167      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+   168      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+   169      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  12 coo: blade1  blade 1 node 12
+   170      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+   171      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+   172      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  13 coo: blade1  blade 1 node 13
+   173      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+   174      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+   175      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  14 coo: blade1  blade 1 node 14
+   176      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+   177      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+   178      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  15 coo: blade1  blade 1 node 15
+   179      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+   180      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+   181      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  16 coo: blade1  blade 1 node 16
+   182      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   183      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   184      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  17 coo: blade1  blade 1 node 17
+   185      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   186      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   187      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  18 coo: blade1  blade 1 node 18
+   188      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   189      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   190      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  19 coo: blade1  blade 1 node 19
+   191      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   192      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   193      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  20 coo: blade1  blade 1 node 20
+   194      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   195      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   196      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  21 coo: blade1  blade 1 node 21
+   197      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   198      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   199      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  22 coo: blade1  blade 1 node 22
+   200      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   201      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   202      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  23 coo: blade1  blade 1 node 23
+   203      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   204      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   205      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  24 coo: blade1  blade 1 node 24
+   206      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   207      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   208      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  25 coo: blade1  blade 1 node 25
+   209      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   210      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   211      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  26 coo: blade1  blade 1 node 26
+   212      Mx coo: blade1                 kNm        MomentMx Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   213      My coo: blade1                 kNm        MomentMy Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   214      Mz coo: blade1                 kNm        MomentMz Mbdy:blade1 nodenr:  27 coo: blade1  blade 1 node 27
+   215      State pos x  coo: global       m          State pos x  Mbdy:towertop E-nr:   1 Z-rel:1.00 coo: global  tower top flange position
+   216      State pos y  coo: global       m          State pos y  Mbdy:towertop E-nr:   1 Z-rel:1.00 coo: global  tower top flange position
+   217      State pos z  coo: global       m          State pos z  Mbdy:towertop E-nr:   1 Z-rel:1.00 coo: global  tower top flange position
+   218      State pos x  coo: blade1       m          State pos x  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: blade1  blade 1 tip pos
+   219      State pos y  coo: blade1       m          State pos y  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: blade1  blade 1 tip pos
+   220      State pos z  coo: blade1       m          State pos z  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: blade1  blade 1 tip pos
+   221      State pos x  coo: blade2       m          State pos x  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: blade2  blade 2 tip pos
+   222      State pos y  coo: blade2       m          State pos y  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: blade2  blade 2 tip pos
+   223      State pos z  coo: blade2       m          State pos z  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: blade2  blade 2 tip pos
+   224      State pos x  coo: blade3       m          State pos x  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: blade3  blade 3 tip pos
+   225      State pos y  coo: blade3       m          State pos y  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: blade3  blade 3 tip pos
+   226      State pos z  coo: blade3       m          State pos z  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: blade3  blade 3 tip pos
+   227      State pos x  coo: hub1         m          State pos x  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: hub1  blade 1 tip pos
+   228      State pos y  coo: hub1         m          State pos y  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: hub1  blade 1 tip pos
+   229      State pos z  coo: hub1         m          State pos z  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: hub1  blade 1 tip pos
+   230      State pos x  coo: hub2         m          State pos x  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: hub2  blade 2 tip pos
+   231      State pos y  coo: hub2         m          State pos y  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: hub2  blade 2 tip pos
+   232      State pos z  coo: hub2         m          State pos z  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: hub2  blade 2 tip pos
+   233      State pos x  coo: hub3         m          State pos x  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: hub3  blade 3 tip pos
+   234      State pos y  coo: hub3         m          State pos y  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: hub3  blade 3 tip pos
+   235      State pos z  coo: hub3         m          State pos z  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: hub3  blade 3 tip pos
+   236      State pos x  coo: global       m          State pos x  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: global  blade 1 tip pos
+   237      State pos y  coo: global       m          State pos y  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: global  blade 1 tip pos
+   238      State pos z  coo: global       m          State pos z  Mbdy:blade1 E-nr:  26 Z-rel:1.00 coo: global  blade 1 tip pos
+   239      State pos x  coo: global       m          State pos x  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: global  blade 2 tip pos
+   240      State pos y  coo: global       m          State pos y  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: global  blade 2 tip pos
+   241      State pos z  coo: global       m          State pos z  Mbdy:blade2 E-nr:  26 Z-rel:1.00 coo: global  blade 2 tip pos
+   242      State pos x  coo: global       m          State pos x  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: global  blade 3 tip pos
+   243      State pos y  coo: global       m          State pos y  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: global  blade 3 tip pos
+   244      State pos z  coo: global       m          State pos z  Mbdy:blade3 E-nr:  26 Z-rel:1.00 coo: global  blade 3 tip pos
+   245      Alfa, R= 10.0                  deg        Angle of attack of blade  1 at radius  10.32
+   246      Alfa, R= 20.0                  deg        Angle of attack of blade  1 at radius  20.83
+   247      Alfa, R= 30.0                  deg        Angle of attack of blade  1 at radius  30.94
+   248      Alfa, R= 40.0                  deg        Angle of attack of blade  1 at radius  39.10
+   249      Alfa, R= 50.0                  deg        Angle of attack of blade  1 at radius  50.15
+   250      Alfa, R= 64.8                  deg        Angle of attack of blade  1 at radius  65.67
+   251      Alfa, R= 80.0                  deg        Angle of attack of blade  1 at radius  79.50
+   252      Alfa, R= 10.0                  deg        Angle of attack of blade  2 at radius  10.32
+   253      Alfa, R= 20.0                  deg        Angle of attack of blade  2 at radius  20.83
+   254      Alfa, R= 30.0                  deg        Angle of attack of blade  2 at radius  30.94
+   255      Alfa, R= 40.0                  deg        Angle of attack of blade  2 at radius  39.10
+   256      Alfa, R= 50.0                  deg        Angle of attack of blade  2 at radius  50.15
+   257      Alfa, R= 64.8                  deg        Angle of attack of blade  2 at radius  65.67
+   258      Alfa, R= 80.0                  deg        Angle of attack of blade  2 at radius  79.50
+   259      Alfa, R= 10.0                  deg        Angle of attack of blade  3 at radius  10.32
+   260      Alfa, R= 20.0                  deg        Angle of attack of blade  3 at radius  20.83
+   261      Alfa, R= 30.0                  deg        Angle of attack of blade  3 at radius  30.94
+   262      Alfa, R= 40.0                  deg        Angle of attack of blade  3 at radius  39.10
+   263      Alfa, R= 50.0                  deg        Angle of attack of blade  3 at radius  50.15
+   264      Alfa, R= 64.8                  deg        Angle of attack of blade  3 at radius  65.67
+   265      Alfa, R= 80.0                  deg        Angle of attack of blade  3 at radius  79.50
+   266      Cl, R= 10.0                    deg        Cl of blade  1 at radius  10.32
+   267      Cl, R= 20.0                    deg        Cl of blade  1 at radius  20.83
+   268      Cl, R= 30.0                    deg        Cl of blade  1 at radius  30.94
+   269      Cl, R= 40.0                    deg        Cl of blade  1 at radius  39.10
+   270      Cl, R= 50.0                    deg        Cl of blade  1 at radius  50.15
+   271      Cl, R= 64.8                    deg        Cl of blade  1 at radius  65.67
+   272      Cl, R= 80.0                    deg        Cl of blade  1 at radius  79.50
+   273      Cl, R= 10.0                    deg        Cl of blade  2 at radius  10.32
+   274      Cl, R= 20.0                    deg        Cl of blade  2 at radius  20.83
+   275      Cl, R= 30.0                    deg        Cl of blade  2 at radius  30.94
+   276      Cl, R= 40.0                    deg        Cl of blade  2 at radius  39.10
+   277      Cl, R= 50.0                    deg        Cl of blade  2 at radius  50.15
+   278      Cl, R= 64.8                    deg        Cl of blade  2 at radius  65.67
+   279      Cl, R= 80.0                    deg        Cl of blade  2 at radius  79.50
+   280      Cl, R= 10.0                    deg        Cl of blade  3 at radius  10.32
+   281      Cl, R= 20.0                    deg        Cl of blade  3 at radius  20.83
+   282      Cl, R= 30.0                    deg        Cl of blade  3 at radius  30.94
+   283      Cl, R= 40.0                    deg        Cl of blade  3 at radius  39.10
+   284      Cl, R= 50.0                    deg        Cl of blade  3 at radius  50.15
+   285      Cl, R= 64.8                    deg        Cl of blade  3 at radius  65.67
+   286      Cl, R= 80.0                    deg        Cl of blade  3 at radius  79.50
+   287      Vrel, R= 10.0                  m/s        Relative velocity of blade  1 at radius  10.32
+   288      Vrel, R= 20.0                  m/s        Relative velocity of blade  1 at radius  20.83
+   289      Vrel, R= 30.0                  m/s        Relative velocity of blade  1 at radius  30.94
+   290      Vrel, R= 40.0                  m/s        Relative velocity of blade  1 at radius  39.10
+   291      Vrel, R= 50.0                  m/s        Relative velocity of blade  1 at radius  50.15
+   292      Vrel, R= 64.8                  m/s        Relative velocity of blade  1 at radius  65.67
+   293      Vrel, R= 70.0                  m/s        Relative velocity of blade  1 at radius  70.21
+   294      Vrel, R= 85.0                  m/s        Relative velocity of blade  1 at radius  85.08
+   295      DLL out  1:  1                 -          DLL : 1 outvec :  1  time
+   296      DLL out  1:  2                 -          DLL : 1 outvec :  2  slow speed shaft rad/s
+   297      DLL out  1:  3                 -          DLL : 1 outvec :  3  pitch angle 1
+   298      DLL out  1:  4                 -          DLL : 1 outvec :  4  pitch angle 2
+   299      DLL out  1:  5                 -          DLL : 1 outvec :  5  pitch angle 3
+   300      DLL out  1:  6                 -          DLL : 1 outvec :  6  wsp_x_global
+   301      DLL out  1:  7                 -          DLL : 1 outvec :  7  wsp_y_global
+   302      DLL out  1:  8                 -          DLL : 1 outvec :  8  wsp_z_global
+   303      DLL inp  1:  1                 -          DLL : 1 inpvec :  1  generator torque reference [nm]
+   304      DLL inp  1:  2                 -          DLL : 1 inpvec :  2  pitch angle reference of blade 1 [rad]
+   305      DLL inp  1:  3                 -          DLL : 1 inpvec :  3  pitch angle reference of blade 2 [rad]
+   306      DLL inp  1:  4                 -          DLL : 1 inpvec :  4  pitch angle reference of blade 3 [rad]
+   307      DLL inp  1:  5                 -          DLL : 1 inpvec :  5  power reference [w]
+   308      DLL inp  1:  6                 -          DLL : 1 inpvec :  6  filtered wind speed [m/s]
+   309      DLL inp  1:  7                 -          DLL : 1 inpvec :  7  filtered rotor speed [rad/s]
+   310      DLL inp  1:  8                 -          DLL : 1 inpvec :  8  filtered rotor speed error for torque [rad/s]
+   311      DLL inp  1:  9                 -          DLL : 1 inpvec :  9  bandpass filtered rotor speed [rad/s]
+   312      DLL inp  1: 10                 -          DLL : 1 inpvec : 10  proportional term of torque contr. [nm]
+   313      DLL inp  1: 11                 -          DLL : 1 inpvec : 11  integral term of torque controller [nm]
+   314      DLL inp  1: 12                 -          DLL : 1 inpvec : 12  minimum limit of torque [nm]
+   315      DLL inp  1: 13                 -          DLL : 1 inpvec : 13  maximum limit of torque [nm]
+   316      DLL inp  1: 14                 -          DLL : 1 inpvec : 14  torque limit switch based on pitch [-]
+   317      DLL inp  1: 15                 -          DLL : 1 inpvec : 15  filtered rotor speed error for pitch [rad/s]
+   318      DLL inp  1: 16                 -          DLL : 1 inpvec : 16  power error for pitch [w]
+   319      DLL inp  1: 17                 -          DLL : 1 inpvec : 17  proportional term of pitch controller [rad]
+   320      DLL inp  1: 18                 -          DLL : 1 inpvec : 18  integral term of pitch controller [rad]
+   321      DLL inp  1: 19                 -          DLL : 1 inpvec : 19  minimum limit of pitch [rad]
+   322      DLL inp  1: 20                 -          DLL : 1 inpvec : 20  maximum limit of pitch [rad]
+   323      DLL inp  1: 21                 -          DLL : 1 inpvec : 21  torque reference from dt dammper [nm]
+   324      DLL inp  1: 22                 -          DLL : 1 inpvec : 22  status signal [-]
+   325      DLL inp  1: 23                 -          DLL : 1 inpvec : 23  total added pitch rate [rad/s]
+   326      DLL out  2:  1                 -          DLL : 2 outvec :  1  time
+   327      DLL out  2:  2                 -          DLL : 2 outvec :  2  electrical torque reference [nm]
+   328      DLL out  2:  3                 -          DLL : 2 outvec :  3  omega lss
+   329      DLL inp  2:  1                 -          DLL : 2 inpvec :  1  mgen lss [nm]
+   330      DLL inp  2:  2                 -          DLL : 2 inpvec :  2  pelec w
+   331      DLL inp  2:  3                 -          DLL : 2 inpvec :  3  mframe
+   332      DLL inp  2:  4                 -          DLL : 2 inpvec :  4  mgen hss
+   333      DLL inp  2:  5                 -          DLL : 2 inpvec :  5  generator pmech kw
+   334      DLL inp  2:  6                 -          DLL : 2 inpvec :  6  filtered gen speed
+   335      DLL out  3:  1                 -          DLL : 3 outvec :  1  time
+   336      DLL out  3:  2                 -          DLL : 3 outvec :  2  pitchref 1
+   337      DLL out  3:  3                 -          DLL : 3 outvec :  3  pitchref 2
+   338      DLL out  3:  4                 -          DLL : 3 outvec :  4  pitchref 3
+   339      DLL inp  3:  1                 -          DLL : 3 inpvec :  1  pitch 1
+   340      DLL inp  3:  2                 -          DLL : 3 inpvec :  2  pitch 2
+   341      DLL inp  3:  3                 -          DLL : 3 inpvec :  3  pitch 3
+   342      WSP gl. coo.,Abs_vhor          m/s        Free wind speed Abs_vhor, gl. coo, of gl. pos    0.00,   0.00,-119.00
+   343      WSP gl. coo.,Vdir_hor          deg        Free wind speed Vdir_hor, gl. coo, of gl. pos    0.00,   0.00,-119.00
+________________________________________________________________________________________________________________________
+Scale factors:
+  2.18750E-02
+  1.12486E-02
+  3.19957E-04
+  2.45833E-04
+  3.20770E-05
+  2.45830E-04
+  3.20201E-05
+  2.45831E-04
+  3.20233E-05
+  3.34493E-05
+  4.46381E-01
+  4.57093E-01
+  5.44937E-02
+  1.72128E-04
+  5.65555E-04
+  1.08347E-04
+  5.35836E-01
+  3.93035E-01
+  5.77759E-01
+  4.21253E-03
+  5.90034E-02
+  2.18425E-01
+  6.84211E+00
+  7.94953E-01
+  5.79855E-01
+  6.56740E-03
+  6.64732E-02
+  4.11680E-01
+  5.35784E-01
+  3.90259E-01
+  5.80813E-01
+  4.71181E-03
+  6.16271E-02
+  2.17880E-01
+  5.68924E-01
+  5.57894E-01
+  3.69739E-01
+  1.17360E+00
+  4.24320E-01
+  9.96678E-03
+  6.47011E-01
+  1.79371E-01
+  5.75096E-03
+  1.32287E+00
+  5.44259E-01
+  9.48937E-03
+  1.32515E+00
+  5.41550E-01
+  9.92632E-03
+  1.38621E+00
+  5.21177E-01
+  1.09046E-02
+  1.66774E-02
+  2.57457E-02
+  5.39516E-02
+  1.55994E-02
+  2.57138E-02
+  5.24917E-02
+  1.45316E-02
+  2.56480E-02
+  5.06758E-02
+  1.41895E-02
+  2.55994E-02
+  4.96654E-02
+  1.36277E-02
+  2.55349E-02
+  4.84648E-02
+  1.30925E-02
+  2.54477E-02
+  4.71474E-02
+  1.25552E-02
+  2.53384E-02
+  4.58318E-02
+  1.22664E-02
+  2.52606E-02
+  4.49905E-02
+  1.17507E-02
+  2.51025E-02
+  4.36332E-02
+  1.08573E-02
+  2.47166E-02
+  4.11237E-02
+  1.00386E-02
+  2.42641E-02
+  3.87152E-02
+  9.25781E-03
+  2.36642E-02
+  3.63030E-02
+  8.50099E-03
+  2.29840E-02
+  3.35608E-02
+  7.77019E-03
+  2.22267E-02
+  3.10786E-02
+  7.05972E-03
+  2.13274E-02
+  2.85466E-02
+  5.79360E-03
+  1.93241E-02
+  2.35656E-02
+  4.63916E-03
+  1.66760E-02
+  1.87172E-02
+  3.56971E-03
+  1.37575E-02
+  1.41363E-02
+  2.63055E-03
+  1.12487E-02
+  9.40131E-03
+  1.86533E-03
+  8.35701E-03
+  6.00617E-03
+  1.13299E-03
+  5.49150E-03
+  3.31979E-03
+  4.48920E-04
+  2.59423E-03
+  1.07890E-03
+  3.30755E-04
+  1.96933E-03
+  7.25517E-04
+  2.20617E-04
+  1.36435E-03
+  4.64698E-04
+  1.22108E-04
+  7.98861E-04
+  2.42417E-04
+  4.40286E-05
+  3.06701E-04
+  9.03066E-05
+  1.43087E-07
+  4.14992E-07
+  2.12541E-06
+  1.32803E+00
+  5.18215E-01
+  9.59184E-03
+  1.25067E+00
+  4.69753E-01
+  9.70534E-03
+  1.17347E+00
+  4.24286E-01
+  9.97175E-03
+  1.14794E+00
+  4.10145E-01
+  9.88267E-03
+  1.10466E+00
+  3.86321E-01
+  1.00223E-02
+  1.06164E+00
+  3.64031E-01
+  9.73953E-03
+  1.01614E+00
+  3.40183E-01
+  1.02768E-02
+  9.91138E-01
+  3.27638E-01
+  1.03459E-02
+  9.45983E-01
+  3.05819E-01
+  1.04678E-02
+  8.68755E-01
+  2.69919E-01
+  1.05054E-02
+  7.90890E-01
+  2.38414E-01
+  1.03442E-02
+  7.14200E-01
+  2.10128E-01
+  9.28228E-03
+  6.43811E-01
+  1.82407E-01
+  9.44991E-03
+  5.72212E-01
+  1.58014E-01
+  8.75954E-03
+  5.03239E-01
+  1.35777E-01
+  7.88892E-03
+  4.02268E-01
+  9.99444E-02
+  5.61132E-03
+  2.97009E-01
+  6.87825E-02
+  4.25291E-03
+  2.03141E-01
+  4.47483E-02
+  3.44229E-03
+  1.34427E-01
+  2.93755E-02
+  2.21208E-03
+  7.53239E-02
+  1.55532E-02
+  1.48262E-03
+  3.30852E-02
+  6.26249E-03
+  8.71261E-04
+  8.28130E-03
+  1.49175E-03
+  4.00485E-04
+  4.98502E-03
+  8.91040E-04
+  2.98481E-04
+  2.54320E-03
+  4.54083E-04
+  2.10268E-04
+  9.74521E-04
+  1.79824E-04
+  1.34817E-04
+  1.73560E-04
+  3.57146E-05
+  5.27636E-05
+  1.25399E-07
+  5.91684E-08
+  6.60783E-08
+  4.22740E-06
+  2.73609E-05
+  3.69912E-03
+  6.37708E-05
+  2.81323E-04
+  2.70247E-03
+  6.27441E-05
+  2.72048E-04
+  2.70248E-03
+  6.29569E-05
+  2.85771E-04
+  2.70248E-03
+  6.87378E-05
+  2.81323E-04
+  2.78997E-03
+  6.59978E-05
+  2.72047E-04
+  2.78998E-03
+  6.70697E-05
+  2.85278E-04
+  2.78998E-03
+  2.79320E-03
+  5.93975E-04
+  6.50229E-03
+  2.79264E-03
+  6.02148E-04
+  6.50214E-03
+  2.79303E-03
+  6.04979E-04
+  6.50311E-03
+  1.28000E-03
+  6.67138E-04
+  4.99333E-04
+  4.54742E-04
+  4.18744E-04
+  4.04943E-04
+  3.63447E-04
+  1.16412E-03
+  7.01753E-04
+  5.53970E-04
+  4.37442E-04
+  3.51776E-04
+  3.84260E-04
+  3.59956E-04
+  1.24406E-03
+  7.14324E-04
+  4.94640E-04
+  4.74062E-04
+  3.83850E-04
+  3.52061E-04
+  3.49928E-04
+  3.47107E-05
+  5.65705E-05
+  6.30370E-05
+  5.73021E-05
+  5.48293E-05
+  5.44166E-05
+  5.06506E-05
+  3.71406E-05
+  5.77607E-05
+  6.74345E-05
+  5.52037E-05
+  4.77614E-05
+  5.23808E-05
+  5.10532E-05
+  3.72740E-05
+  5.83414E-05
+  6.28877E-05
+  5.82663E-05
+  5.12460E-05
+  4.93118E-05
+  4.98587E-05
+  7.06161E-04
+  1.00456E-03
+  1.33171E-03
+  1.58404E-03
+  1.95214E-03
+  2.43893E-03
+  2.59877E-03
+  3.09728E-03
+  2.18750E-02
+  3.35058E-05
+  4.29059E-06
+  4.29054E-06
+  4.29056E-06
+  1.72128E-04
+  5.65555E-04
+  1.08347E-04
+  3.42912E+02
+  4.29013E-06
+  4.29013E-06
+  4.29013E-06
+  3.12500E+02
+  4.49244E-04
+  3.33289E-05
+  5.89057E-06
+  1.00000E+00
+  4.02453E+02
+  6.30838E+02
+  3.42912E+02
+  3.42913E+02
+  3.12500E-05
+  6.16722E-06
+  1.41449E+02
+  5.31215E-06
+  5.27225E-06
+  4.25418E-11
+  4.90874E-05
+  1.00000E+00
+  1.00000E+00
+  1.00000E+00
+  2.18750E-02
+  3.42912E+02
+  3.35058E-05
+  3.64799E+02
+  3.13106E+02
+  1.00000E+00
+  3.64799E+02
+  3.33091E-01
+  3.69739E+02
+  2.18750E-02
+  4.29013E-06
+  4.29013E-06
+  4.29013E-06
+  4.29059E-06
+  4.29054E-06
+  4.29056E-06
+  5.66227E-04
+  9.68441E-04
