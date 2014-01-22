@@ -72,7 +72,6 @@ class WEFileIO(object):
     def plot(self):
         fig = plt.figure()
         self._plot(fig)
-        fig.save
         plt.show()
 
 
