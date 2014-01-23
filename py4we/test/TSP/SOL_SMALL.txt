@@ -1,0 +1,15 @@
+TSP for 5 Cities.
+Possible Routes: 120
+Calculation Completed in: 0.131495698425 seconds.
+
+Best Route Distance: 2677 km.
+Best Forward/Backward Route (City ID): [3, 4, 5, 1, 2]
+Best Forward/Backward Route: Guadalajara - Leon - Merida - Cancun - Chetumal
+
+Distances between Cities:
+
+99999 380 2197 2044 315
+380 99999 1906 1753 413
+2197 1906 99999 230 1878
+2044 1753 230 99999 1752
+315 413 1878 1752 99999

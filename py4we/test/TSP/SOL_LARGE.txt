@@ -1,4 +1,12 @@
-12
+TSP for 12 Cities.
+Possible Routes: 479001600
+Calculation Completed in: 1718.13212482 seconds.
+
+Best Route Distance: 3815 km.
+Best Forward/Backward Route (City ID): [2, 1, 5, 10, 6, 9, 11, 4, 3, 12, 7, 8]
+Best Forward/Backward Route: Chetumal - Cancun - Merida - Puebla - Cd. Mexico - Pachuca - Queretaro - Leon - Guadalajara - Saltillo - Monterrey - Nuevo Laredo
+
+Distances between Cities:
 
 99999 380 2197 2044 315 1651 2378 2602 1710 1528 1856 2463
 380 99999 1906 1753 413 1300 2091 2315 1419 1237 1575 2175
@@ -12,36 +20,3 @@
 1528 1237 559 516 1209 123 1048 1272 182 99999 338 951
 1856 1575 350 178 1547 215 706 932 232 338 99999 664
 2463 2175 701 531 2160 828 85 309 843 951 664 99999
-
-Cancun
-Chetumal
-Guadalajara
-Leon
-Merida
-Cd. Mexico
-Monterrey
-Nuevo Laredo
-Pachuca
-Puebla
-Queretaro
-Saltillo
-
-21.15877854 -86.84570216
-18.50293192 -88.30342652
-20.66712699 -103.342436
-21.12345338 -101.6755451
-20.96313445 -89.61705065
-19.42565312 -99.12649654
-25.67954697 -100.3047256
-27.48069568 -99.51567315
-20.11280193 -98.74578642
-19.02890536 -98.20945866
-20.59577342 -100.3872265
-25.44555859 -100.9859951
-
-Image:
-True
-
-Mexico.jpg
--121.948242 -80.551758
-11.695273 35.317366
