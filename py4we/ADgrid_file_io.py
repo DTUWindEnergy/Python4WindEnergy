@@ -14,7 +14,8 @@ from __future__ import print_function
 from we_file_io import WEFileIO, TestWEFileIO
 import unittest
 import numpy as np
-
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 ### Your class should look like this one ---------------------------------
 
@@ -51,9 +52,51 @@ class ADgridFileIO(WEFileIO):
             #print(self.dims[0]*self.dims[1])
             # Read the grid into an array
             self.data=np.loadtxt(self.filename, usecols=range(self.dims[0]*self.dims[1],self.dims[2]),skiprows=1)
-            #print(self.data)
-            #print(self.dims[0])
 
+
+
+    def _plot(self,fig):
+            plt.close()
+            fig, ax = plt.subplots(ncols=2, figsize=(18,8))
+
+            # Plot AD grid
+            ax[0].plot(self.data[:,0],self.data[:,1])
+            ax[0].set_title('Grid')
+            ax[0].set_xlabel('x')
+            ax[0].set_ylabel('y')
+
+            # Plot the thrust force on the blade.
+            # First convert the AD thrust forces to 
+            # the thrust force blade distribution.
+
+            # AD force to blade force
+            i_r=1
+            Fblade=np.zeros((self.dims[0],2))
+            Fblade[0,0]=-self.data[0,0]
+            for i in range(0,self.dims[0]*self.dims[1]): 
+                if i<self.dims[1]*i_r:
+                    Fblade[i_r-1,1]=Fblade[i_r-1,1]-self.data[i,3]
+                else:
+                    Fblade[i_r,0]=-self.data[i,0]
+                    i_r=i_r+1
+            print("The total thrust force is = ",sum(Fblade[:,1]))
+            Fblade[:,1]=Fblade[:,1]/3
+              
+            # blade force to blade force distrubution
+            qblade=Fblade
+            dr=np.zeros((self.dims[0],1))
+            dr[0,0]=2*Fblade[0,0]*63
+            drSum=dr[0,0]
+            for i in range(1,self.dims[0]):
+                dr[i,0]=(Fblade[i,0]*63-drSum)*2
+                drSum=drSum+dr[i,0]
+            for i in range(0,self.dims[0]):
+                qblade[i,1]=Fblade[i,1]/dr[i,0]
+
+            ax[1].plot(qblade[:,0],qblade[:,1],'r')
+            ax[1].set_title('Thrust force')
+            ax[1].set_xlabel('r')
+            ax[1].set_ylabel('Force')
 
 
 
@@ -65,6 +108,12 @@ class ADgridFileIO(WEFileIO):
 #    def test_duplication(self):
 #        self._test_duplication(ADgridFileIO, './ADgrid/ADgrid.dat')
 
+
+#class plotADgrid(object):
+#    def(self):
+#        plt.
+
+    
 
 ## Main function ---------------------------------------------------------
 if __name__ == '__main__':
@@ -82,5 +131,8 @@ if __name__ == '__main__':
     MY_OBJ = ADgridFileIO('test/ADgrid/ADgrid.dat')
     # This is how to write a file:
     MY_OBJ.write('test/ADgrid/ADgrid2.dat')
+    #print(MY_OBJ.data) 
+    # This is how to plot a file
+    MY_OBJ.plot()
 
 
