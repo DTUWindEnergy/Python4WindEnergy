@@ -12,6 +12,10 @@ s = slides(
   institute = "Aero-elastic Section, Wind Energy Department, DTU, Ris\\o{}"
 )
 
+f = lambda *args, **kwargs: s.f(*args, **kwargs)
+section = lambda *args, **kwargs: s.section(*args, **kwargs)
+subsection = lambda *args, **kwargs: s.subsection(*args, **kwargs)
+
 ### Create the outline of the presentation using the sections and subsections
 s.f('Outline','\\tableofcontents')
 
@@ -120,6 +124,13 @@ s.f('Conclusion', itemize([
     'The discrepancies for narrow wind direction sectors are not caused by a fundamental inaccuracy of the current wake models, but rather by a large wind direction uncertainty included in the dataset',
     'We need some models and measurements for wind direction uncertainty to move forwards from this stage',
     '\color{red}{Do not "tune" your wake models to match the $\pm2.5^\circ$ measurements!!!}']))
+
+s.f('Conclusion', """
+* The N.O. Jensen model, the G.C. Larsen model and Fuga are robust engineering models able to provide accurate predictions using wind direction sectors of $30^\circ$
+* The discrepancies for narrow wind direction sectors are not caused by a fundamental inaccuracy of the current wake models, but rather by a large wind direction uncertainty included in the dataset
+* We need some models and measurements for wind direction uncertainty to move forwards from this stage
+* \color{red}{Do not "tune" your wake models to match the $\pm2.5^\circ$ measurements!!!}
+""")
            
 s.f('Future work',[block(itemize([
     'The method will be applied to other wake models and datasets',
@@ -130,6 +141,16 @@ s.f('Future work',[block(itemize([
     'Opening FUSED-Wind to the public',
     'Adding Uncertainty Quantification to FUSED-Wind',
       ]), title='System Engineering')])
+
+s.f('Future work',[block("""
+- The method will be applied to other wake models and datasets
+- Sample based uncertainty quantification to be investigated
+- Work on estimating the wind direction uncertainty using the wind farm dataset""",
+    title='Wind Farm Flow Model Uncertainty'),
+    block("""
+- Opening FUSED-Wind to the public
+- Adding Uncertainty Quantification to FUSED-Wind""",
+    title='System Engineering')])
 
 s.f('Thank you for your attention!',
   [itemize(['Work funded by EUDP-WakeBench and EERA-DTOC',
