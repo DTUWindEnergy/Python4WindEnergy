@@ -21,10 +21,10 @@ from matplotlib import pylab as plt
 
 import numpy as np
 
-datapoint = lambda d: [float(d.get(i)) for i in ('WindSpeed', 'PowerOutput', 'ThrustCoEfficient')]
-
 
 #### Semi private classes --------------------------------------------------------------------------
+datapoint = lambda d: [float(d.get(i)) for i in ('WindSpeed', 'PowerOutput', 'ThrustCoEfficient')]
+
 def generate_vl(arr_):
     """Iterator for populating a list of VectLines"""
     n1 = 0

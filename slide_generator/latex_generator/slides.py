@@ -43,6 +43,15 @@ class slides(report):
         """ Add a frame to the slideshow"""
         self.addl(frame(doc_main=doc, title=title))
 
+    # def outline(self, title='Outline', section=None):
+    #     if section:
+    #         self.f(title, '\\tableofcontents[%s]'%(section))
+    #     else:
+    #         self.f(title, '\\tableofcontents')
+
+    # def section(self, long_name, short_name='', label=None):
+    #     super(slides, self).section(long_name, short_name, label)
+    #     self.outline(section=long_name)
 
 class columns(latex_element):
     template = """
@@ -61,7 +70,7 @@ class columns(latex_element):
   					w = widths[i]
   				else:
   					w = '%f\\textwidth'%(1.0/len(c) - 0.01)
-  				self.c.append(column(e, width=w, position=self.position))
+  				self.c.append(_column(e, width=w, position=self.position))
     	else:
     		self.c = []
 	        for w in widths:
@@ -74,7 +83,7 @@ class columns(latex_element):
         
     
     
-class column(latex_element):
+class _column(latex_element):
     template = """
 \\begin{column}[#position#]{#width#}
 #doc_main#
@@ -82,7 +91,5 @@ class column(latex_element):
 """
     width = '4.5cm'
     position = 'c'
-
-  
 
 

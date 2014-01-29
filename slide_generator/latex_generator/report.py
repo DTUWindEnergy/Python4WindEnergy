@@ -2,11 +2,64 @@ from __future__ import unicode_literals
 import commands
 import re
 
+tag_dic = {
+    'end*':'\\end{itemize}',
+    'begin*':'\\begin{itemize}',
+    'end-':'\\end{itemize}',
+    'begin-':'\\begin{itemize}',
+    'begin+':'\\begin{block}',
+    'end+':'\\end{block}'
+}
+
+def md2tex(instr):
+    """ Detect itemize in a markdown way.
+    * - indicate an item
+    + indicate a block
+    """
+    outstr = ""
+    dic={}
+    for l in instr.split('\n'):
+        sps = re.findall('^\s*[*+-]',l)
+        #print sps
+        if len(sps)>0:
+            sp = sps[0]
+            dk = dic.keys()
+            lens = map(len, dk)
+            z1 = zip(lens, dk)
+            z1.sort(key = lambda t: t[0], reverse=True)
+            #print dic, z1            
+            for le, i in z1:
+                if len(i) > len(sp):
+                    outstr += i[:-1] + tag_dic['end'+i[-1]] + '\n'
+                    dic.pop(i)
+            if sp in dic and (sp[-1] == '*' or sp[-1] == '-'):
+                outstr += sp[:-1] + '  \\item ' + l[len(sp):] + '\n'
+                dic[sp] += 1
+            else:
+                dic[sp] = 0
+                if sp[-1] == '*' or sp[-1] == '-':
+                    outstr += sp[:-1] + tag_dic['begin'+sp[-1]] + '\n'  
+                    outstr += sp[:-1] + '  \\item ' + l[len(sp):] + '\n'
+                if sp[-1] == '+':
+                    outstr += sp[:-1] + tag_dic['begin'+sp[-1]] + '{' + l[len(sp):] + '}\n'                    
+        else:
+            dk = dic.keys()
+            lens = map(len, dk)
+            z1 = zip(lens, dk)
+            z1.sort(key = lambda t: t[0], reverse=True)
+            #print dic, z1
+            for le, i in z1:
+                if len(i) > len(re.findall('^\s*',l)[0]):
+                    outstr += i[:-1] + tag_dic['end'+i[-1]] + '\n'
+                    dic.pop(i)
+            outstr += l + '\n'
+    return outstr
 
 def formi(input_string, dico):
     """
     Parsing function. Find all the #tags# in the string and
     replace them by the equivalent key in the dico.
+    Replace the markdown keys by latex equivalent (using md2tex function).
     return the modified string.
     
     Tag pattern: any string composed of characters underscores and numbers surrounded by #
@@ -35,7 +88,7 @@ def formi(input_string, dico):
             string = string.replace(t, tostr(value))
         else:
             string = string.replace(t, '----'+key.upper()+'----')
-    return string
+    return md2tex(string)
 
 
 def tostr(input_string):
@@ -209,8 +262,9 @@ class report(latex_element):
     def compile(self):
         self.save()
         for i in range(3):
-            commands.getoutput('xterm -e pdflatex ' + self.tex_filename)
-            commands.getoutput('open '+self.pdf_filename)
+            # commands.getoutput('xterm -e pdflatex ' + self.tex_filename)
+            commands.getoutput('pdflatex ' + self.tex_filename)
+            #commands.getoutput('open '+self.pdf_filename)
     
 
 def cfig(filename, width='\\textwidth'):
@@ -287,5 +341,5 @@ def env_latex(env, string):
 
 eq = lambda string: env_latex('equation', string)
 centered = lambda string: env_latex('center', string)
-
+ceq = lambda string: centered(eq(string))
           

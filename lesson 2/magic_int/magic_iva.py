@@ -15,25 +15,37 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True  
-        
+
+
 class MagicInt(int):
+    broj = 0
+    _prime = None
+	
+    @property
+    def prime(self):
+        if self._prime == None:
+            self._prime = is_prime(self.broj)
+        return self._prime
+		
+    @prime.setter
+    def prime(self, value):
+        self._prime = value
+	
     def __init__(self, value):
-        self.value = value
-        self.prime = is_prime(value)
+        self.broj = value
         
     def __add__(self, other):
-        if self == other:
+        if self.broj == 2 and other == 2:
             return MagicInt(5)
-        return MagicInt(self.value + other)
+        return MagicInt(self.broj + other)
         
     def __len__(self):
-        return len(str(abs(self.value)))
-        
+        return len(str(abs(self.broj)))
 
-                    
-        
+
 #Do not modify code below
 two = MagicInt(2)
+m9 = MagicInt(9)
 m127 = MagicInt(127)
 
 # a int
@@ -41,6 +53,7 @@ assert isinstance(two, int)
 
 ## 2 + 2 = 5
 assert two + two == 5
+assert m9 + m9 == 18
 assert two + 3 == 5
 #
 ##Result of addition is also a MInt object
@@ -60,4 +73,4 @@ assert (two+m127).prime==False
 m127.prime = False
 assert m127.prime==False
 
-print "Yeah!!! All asserts satisfied"
+print("Yeah!!! All asserts satisfied")

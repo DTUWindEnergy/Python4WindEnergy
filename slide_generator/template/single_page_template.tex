@@ -1,0 +1,42 @@
+\documentclass[9pt,xcolor=pst,dvipsnames]{beamer}
+\usepackage{beamerthemesplit}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usecolortheme{beaver}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{psfrag,pstricks}
+\usepackage{epic,eepic,epsfig,graphicx}
+\usepackage{fleqn}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel,ulem}
+\usepackage{comment}
+%\usepackage{pst-all}
+\usepackage{apacite}
+\usepackage{color}
+\usepackage{arev}
+\usepackage{fancybox}
+\usepackage{rotating}
+\usetheme[]{Copenhagen}
+
+\newcommand\Section[2][]{%
+  \section<presentation>[#1]{#2}
+  \section<article>{#2}
+}
+\newcommand\Subsection[2][]{%
+  \subsection<presentation>[#1]{#2}
+  \subsection<article>{#2}
+}
+
+\include{template/DTUtemplatefrontmatter}
+\begin{document}
+\include{template/DTUtemplatedocument}
+#doc_main#
+\end{document}
