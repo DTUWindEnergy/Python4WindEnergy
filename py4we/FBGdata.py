@@ -16,7 +16,9 @@ import unittest
 
 import numpy as np
 import os.path as path
-
+import scipy as sp
+import sympy
+import matplotlib.pyplot as plt
 
 ### Your class should look like this one ---------------------------------
 
@@ -73,8 +75,58 @@ class FBGdata(WEFileIO):
             dtypes = {'names' : (names),'formats': (formats) }           
             self.data=np.loadtxt(self.filename, dtype=dtypes,skiprows=4)
         
-  
+    def _plot(self,fig):   
+        self.fig=fig
+        
+        
+        head=self.head.split('\t')
+        
+                
+        page_width_cm = 13
+        dpi = 200
+        inch = 2.54 # inch in cm
+        # setting global plot configuration using the RC configuration style
+        plt.rc('font', family='serif')
+        plt.rc('xtick', labelsize=12) # tick labels
+        plt.rc('ytick', labelsize=12) # tick labels
+        plt.rc('axes', labelsize=12)  # axes labels
+                    
+        
+        
+        self.fig, ax = plt.subplots(nrows=2, ncols=1, figsize=(10,15))
+        self.fig.suptitle('Name: %s \n%s \n Start: %s, End:%s'%(head[0],head[1],head[2],head[3]), fontsize=16)
+        
+        ax[1].grid()
+        ax[0].grid()
+        """Plot of Relative values""" 
 
+        ax[0].set_title("Relative Wavelength",fontsize=14)    
+                                                       
+        for i in range(self.nsens):
+            sensor= 's'+str(i+1)
+            ax[0].plot(self.data[sensor], linewidth=2.00,label="Sensor "+str(i+1))   
+            
+        ax[0].legend(fontsize=12, loc="best")
+        ax[0].set_xlabel('Time (s)')
+        ax[0].set_ylabel(r'$\Delta$\lambda [$\mu m]')
+         
+        
+        """Plot of absolute values"""
+        
+        ax[1].set_title("Absolute Wavelength",fontsize=14)
+        senss=self.sens.split('\t')
+        for i in range(self.nsens):
+            
+            """getting the sensor absolute value"""
+            v=senss[i+2]
+            sensv=float(v[14:25])
+            sensor= 's'+str(i+1)    
+            ax[1].plot(sensv+self.data[sensor], linewidth=2.00,label="Sensor "+str(i+1))
+            
+        ax[1].legend(fontsize=12, loc="best")    
+        ax[1].set_xlabel('Time (s)')
+        ax[1].set_ylabel('$\lambda [$\mu m]')
+          
 
 
 
