@@ -1,1 +1,1 @@
-ipython notebook
+ipython notebook --matplotlib=inline
