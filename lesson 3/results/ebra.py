@@ -234,9 +234,11 @@ for ax in axes:
 # <codecell>
 X, Y = np.meshgrid(x,x)
 plt.figure()
-plt.contourf(X,Y,X*Y,linewidth=0.3,cmap=plt.get_cmap('hsv'))
-# im=ax.contourf(x,y,ui,levels=np.arange(Umean-5*Ustd,Umean+5*Ustd,Ustd/30),cmap=plt.get_cmap('hsv'),linewidth=0.1)
+plt.contourf(X,Y,X*Y,linewidth=0.3,cmap=plt.get_cmap('hsv'),levels=np.arange(-1,1,0.1))
+plt.show
 
+
+# im=ax.contourf(x,y,ui,levels=np.arange(Umean-5*Ustd,Umean+5*Ustd,Ustd/30),cmap=plt.get_cmap('hsv'),linewidth=0.1)
 # <markdowncell>
 
 # * use twinx() to create a second axis on the right for the second plot
