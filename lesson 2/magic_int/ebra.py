@@ -1,5 +1,7 @@
 class MagicInt(int):
-    prime=[]
+    prime=property(get_prime,set_prime):
+        _prime=None
+
     def __init__(self,i):
         self.prime=self.is_prime()
 
@@ -14,9 +16,16 @@ class MagicInt(int):
         return len(str(abs(x)))
 
 
-    def is_prime(self):
-        isprime= (lambda n : all([n%x for x in range(2,n)]))
-        return isprime(int(self))
+    def get_prime(self):
+        if(self._prime is None):
+            isprime= (lambda n : all([n%x for x in range(2,n)]))
+            self._prime=isprime(int(self))
+        return(self._prime)
+
+    def set_prime(self,val):
+        self._prime=val
+
+        
 
 
 
@@ -25,6 +34,7 @@ class MagicInt(int):
         
 #Do not modify code below
 two = MagicInt(2)
+three = MagicInt(3)
 m127 = MagicInt(127)
 
 # a int
@@ -32,6 +42,7 @@ assert isinstance(two, int)
 
 # 2 + 2 = 5
 assert two + two == 5
+assert two + three == 6
 assert two + 3 == 5
 
 #Result of addition is also a MInt object
