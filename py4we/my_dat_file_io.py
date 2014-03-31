@@ -49,6 +49,8 @@ class MyDatFileIO(WEFileIO):
         ax = fig.add_subplot(1, 1, 1)
         ax.plot([ord(s) for s in self.data])
         ax.set_title(self.data)
+        ax2 = ax.twinx()
+        ax2.plot(range(5))
 
 
 ## Do Some testing -------------------------------------------------------
