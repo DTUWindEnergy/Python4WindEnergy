@@ -37,13 +37,12 @@ class QtGuiLoader(object):
                 print  ("compile %s > %s" % (ui_file, py_file))
                 # quick and dirty hack
                 if os.name=='posix':
-                    pass
                     # someone has to make that more general
-#                     pyuic_path='/usr/lib/python2.7/dist-packages/PyQt4/uic/pyuic.py'
+                    pyuic_path='/usr/lib/python2.7/dist-packages/PyQt4/uic/pyuic.py'
                 else:
                     # windows
                     pyuic_path = os.path.join(os.path.dirname(sys.executable), 'Lib/site-packages/PyQt4/uic/pyuic.py')
-                    os.system("%s %s %s > %s" % (sys.executable, pyuic_path, ui_file, py_file))
+                os.system("%s %s %s > %s" % (sys.executable, pyuic_path, ui_file, py_file))
             
         reload(ui_module)
     def connect_actions(self,action_receiver=None):
