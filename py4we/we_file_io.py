@@ -13,20 +13,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 class WEFileIO(object):
     """Generic IO classe for file types classes."""
-
-    def __init__(self, filename=None):
+    figure = None
+    def __init__(self, filename=None, file_type_name = "MyFileTypeName", file_extension="*"):
         """ Initialized the classe using the filename
 
         Parameters:
         ----------
         filename : string (optional)
                    The file name to read and write
+        file_type_name : string (optional)
+                   The name of the file type
+        file_extension : string (optional)
+                   The file name extension of the file type, e.g. "txt"
         """
+        self.file_type_name = file_type_name
+        self.file_extension = file_extension
         if filename:
             ### If there is a new filename, replace the object variable
             self.filename = filename
             ### If the filename is provided, read the file
             self.read()
+         
 
     def read(self, filename=None):
         """ Read the file
@@ -38,7 +45,7 @@ class WEFileIO(object):
         Returns:
         --------
         data : string
-        	   the data read
+               the data read
         """
         if filename:
             ### If there is a new filename, replace the object variable
@@ -69,9 +76,10 @@ class WEFileIO(object):
             # If self.filename == None, raise an exception
             raise Exception('No filename has been provided')
 
-    def plot(self):
-        fig = plt.figure()
-        self._plot(fig)
+    def plot(self, *args, **kwargs):
+        if self.figure is None:
+            self.figure = plt.figure()
+        self._plot(self.figure, *args, **kwargs)
         plt.show()
 
 

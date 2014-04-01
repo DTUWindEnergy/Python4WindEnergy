@@ -13,6 +13,7 @@ License: Apache v2.0, http://www.apache.org/licenses/LICENSE-2.0
 from __future__ import print_function
 from we_file_io import WEFileIO, TestWEFileIO
 import unittest
+import matplotlib.pyplot as plt
 
 
 class DakotaTabFileIO(WEFileIO):
@@ -100,6 +101,15 @@ class DakotaTabFileIO(WEFileIO):
                 ax.set_xlabel(self.keys[0])
                 ax.set_ylabel(self.keys[i_row])
 
+        # setting global plot configuration using the RC configuration style
+        plt.rc('font', family='serif')
+        plt.rc('xtick', labelsize=20) # tick labels
+        plt.rc('ytick', labelsize=20) # tick labels
+        plt.rc('axes', labelsize=20)  # axes labels
+        plt.rcParams['figure.figsize'] = 14, 4
+
+        plt.tight_layout()
+
     def __getitem__(self, key):
         """ Transform the class instance into a dictionary."""
         return self.data[key]
@@ -129,7 +139,7 @@ if __name__ == '__main__':
     
     ''' Example uses of DakotaTabFileIO class: 
     '''
-    # a = DakotaTabFileIO("rosen_grad_opt.dat")    
+    # a = DakotaTabFileIO("test/dakota/rosen_grad_opt.dat")    
     # print (type(a))
     # print (a.keys)
     # print (a.data)

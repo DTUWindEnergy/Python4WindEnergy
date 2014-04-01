@@ -207,9 +207,10 @@ class TestOmnivorField(TestWEFileIO):
     """ Test class for OmnivorField class """
 
     test_file = './test/omnivor/ugrid_8584.dat'
+#     test_file = './test/omnivor/uservel_8584.dat'
 #     InputFile=OmnivorFieldFile(test_file)
 #     InputFile.plot()
-#     InputFile.write(test_file+'_new')
+# #     InputFile.write(test_file+'_new')
 # 
     def test_duplication(self):
         import os

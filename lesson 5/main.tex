@@ -1,0 +1,92 @@
+\documentclass[9pt,xcolor=pst,dvipsnames]{beamer}
+\usepackage{beamerthemesplit}
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usecolortheme{beaver}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{psfrag,pstricks}
+\usepackage{epic,eepic,epsfig,graphicx}
+\usepackage{fleqn}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{cancel,ulem}
+\usepackage{comment}
+%\usepackage{pst-all}
+\usepackage{apacite}
+\usepackage{color}
+\usepackage{arev}
+\usepackage{fancybox}
+\usepackage{rotating}
+
+
+
+\usepackage{ifxetex,ifluatex}
+
+\usepackage{color}
+\usepackage{fancyvrb}
+\DefineShortVerb[commandchars=\\\{\}]{\|}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usetheme[]{Copenhagen}
+
+%% Title
+\title{Python Lesson 5 \\ OpenMDAO}
+%% Subtitle
+\subtitle{}
+%% Authors
+\author[P.-E. R\'{e}thor\'{e}]
+  {Pierre-Elouan R\'{e}thor\'{e}$^1$ \\
+   Frederik Zahle$^1$ \\
+   Katherine Dykes$^2$}
+%% Institute
+\institute[\color{Gray}{DTU Wind Energy}]
+  {$^1$ Aero-elastic Section, Wind Energy Department, DTU, Ris\o{}\\
+   $^2$ NREL}
+%% Date
+\date[6 March 2014] 
+  {\centering{\includegraphics[width=0.7\textwidth]{imgs/OpenMDAO_Logo_6501}}}
+%% Subject
+\subject{}
+%% Keyword
+\keywords{----KEYWORDS----}
+
+%\includeonlyframes{current}
+\include{template/DTUtemplatefrontmatter}
+%\include{template/root_commands}
+
+\newcommand\Section[2][]{%
+  \section<presentation>[#1]{#2}
+  \section<article>{#2}
+}
+\newcommand\Subsection[2][]{%
+  \subsection<presentation>[#1]{#2}
+  \subsection<article>{#2}
+}
+\begin{document}
+\include{template/DTUtemplatedocument}
+\include{talk}
+\end{document}
