@@ -26,7 +26,7 @@ import time
 
 class QtGuiLoader(object):
     def compile_ui(self, ui_module):
-        basename = ui_module.__name__.replace(".","\\")
+        basename = ui_module.__name__.replace(".",os.path.sep)
         ui_file = basename + ".ui"
         py_file = basename + ".py"
 
@@ -35,7 +35,13 @@ class QtGuiLoader(object):
             os.path.getmtime(ui_file) > os.path.getmtime(py_file) or \
             os.path.getsize(py_file)==0:
                 print  ("compile %s > %s" % (ui_file, py_file))
-                pyuic_path = os.path.join(os.path.dirname(sys.executable), 'Lib/site-packages/PyQt4/uic/pyuic.py')
+                # quick and dirty hack
+                if os.name=='posix':
+                    # someone has to make that more general
+                    pyuic_path='/usr/lib/python2.7/dist-packages/PyQt4/uic/pyuic.py'
+                else:
+                    # windows
+                    pyuic_path = os.path.join(os.path.dirname(sys.executable), 'Lib/site-packages/PyQt4/uic/pyuic.py')
                 os.system("%s %s %s > %s" % (sys.executable, pyuic_path, ui_file, py_file))
             
         reload(ui_module)
