@@ -7,3 +7,9 @@ Obtaining writing access
 ------------------------
 
 Write an email to pire@dtu.dk to ask to be added to the contributor list
+
+Releases and citation
+---------------------
+You can cite this repository using the Zenodo DOI system:
+
+* [v2014.0](https://github.com/DTUWindEnergy/Python4WindEnergy/tree/v2014.0): [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.12429.png)](http://dx.doi.org/10.5281/zenodo.12429)
